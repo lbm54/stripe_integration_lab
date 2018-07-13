@@ -8,6 +8,7 @@ import Login from './auth/login';
 import Logout from './auth/logout';
 import AuthButton from './auth/authButton';
 import PrivateRoute from './auth/privateRoute';
+import Donate from './donate';
 
 class Navigation extends Component {
     render() {
@@ -19,6 +20,7 @@ class Navigation extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />
+                        <Route path="/donate" component={Donate} />
                         <PrivateRoute exact path="/admin" component={AdminHome} />
                         <PrivateRoute exact path="/admin/:id" component={AdminDisplay} />
                         <Route path="/:id" component={BlogDisplay} />
